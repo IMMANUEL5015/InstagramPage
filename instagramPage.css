@@ -1,0 +1,425 @@
+/* general styles*/
+body{
+    --background-color: #fafafa; 
+    --width: 90%;
+    --margin: auto;
+    --full-width: 100%;
+    --list-style: none;
+    --text-decoration: none;
+    --float: left;
+    --text-color: rgb(139, 137, 137);
+    --display: inline-block;
+    --margin-right: 10px;
+    --img-border-radius: 50%;
+    --img-object-fit: cover;
+    background: var(--background-color);
+}
+
+/* nav styles */
+nav{
+    background-color: white;
+    height: 100px; 
+    margin: -20px -8px 20px -8px;
+    box-shadow: 3px 5px 3px rgb(143, 140, 140); 
+    font-family: 'Lobster', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.7em;
+    position: fixed; 
+    width: var(--full-width);
+    z-index: 1000;
+}
+
+#nav_items_group{
+    width: 70%;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    margin-top: 20px;
+}
+
+.nav_group{
+    float: var(--float);
+}
+form{
+    margin-left: 20%;
+    margin-right: var(--margin);
+    position: relative;
+    color: rgb(200, 200, 200);
+}
+input[type="search"]{
+    height: 30px;
+    width: 200px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    background: rgb(240, 240, 240);
+    text-align: center;
+}
+.fa.fa-search{
+    font-size: 0.5em;
+    position: absolute;
+    left: 50px;
+    top: 16px;
+}
+ul.nav_links{
+float: right;
+margin-top: 2px;
+}
+
+ul.nav_links li{
+    float: var(--float);
+    list-style-type: var(--list-style);
+}
+
+#brand_name_and_icon a, ul.nav_links li a{
+    text-decoration: var(--text-decoration);
+    color: black;
+}
+
+ul.nav_links li:nth-of-type(2){
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* general styles for the main section of the web page */
+section#main_section{
+    padding-top: 100px;
+    width: 70%;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-gap: 25px;
+}
+
+/* Styles for instagram posts */
+
+/* general style for a full instagram post */
+.friend_post{
+    width: var(--full-width);
+    border: 1px solid rgb(201, 197, 197);
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px rgb(201, 197, 197);
+    margin-top: 70px;
+}
+
+/* styles for friend details */
+.friend_details{
+    width: var(--width);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+.friend_profile_picture img{
+    width: 60px;
+    height: 50px;
+    object-fit: var(--img-object-fit);
+    border-radius: var(--img-border-radius);
+}
+.friend_details > div{
+display: var(--display);
+}
+.friend_details > div:nth-of-type(1){
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.friend_details > div:nth-of-type(2){
+    line-height: 30px;
+}
+.friend_details > div:nth-of-type(2) p:nth-of-type(2){
+margin-top: -15px;
+}
+.friend_details > div:nth-of-type(2) p:nth-of-type(1){
+font-weight: bold;
+}
+.friend_details > div:nth-of-type(3){
+float: right;
+}
+#ellipsis_icon{
+    margin-top: 40px;
+}
+
+/* styles for the friend's main image or video post */
+.friend_image_post img{
+    width: var(--full-width);
+}
+
+
+/* Styles for likes and comments */
+.likes_and_comments{
+width: var(--full-width);
+margin-left: var(--margin);
+margin-right: var(--margin);
+}
+
+.likes_and_comments ul{
+    list-style-type: var(--list-style);
+    height: 20px;
+    margin-top: 0px;
+}
+.likes_and_comments ul li a{
+    color: black;
+}
+.likes_and_comments ul li{
+    display: var(--display);
+    margin-right: 45px;
+    font-size: 1.5em;
+    margin-left: -30px;
+    margin-top: 5px;
+}
+.likes_and_comments ul li:nth-of-type(4){
+    float: right;
+    margin-right: var(--margin-right);
+}
+.details_of_likes_and_comments{
+    width: 97%;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+.details_of_likes_and_comments span.commentator{
+    font-weight: bold;
+}
+.details_of_likes_and_comments a{
+    text-decoration: var(--text-decoration);
+}
+.details_of_likes_and_comments i{
+    float: right;
+}
+.details_of_likes_and_comments .time_of_post{
+    font-size: 11px;
+    color: var(--text-color);
+}
+.details_of_likes_and_comments .view_comments a{
+    color: var(--text-color);
+}
+
+/* styles for the input area where comments can be added */
+.add_comment{
+    border-top: 1px solid rgb(200, 200, 200);   
+}
+.add_comment form{
+width: 97%;
+margin-left: 0px;
+margin-bottom: -5px;
+height: 50px;
+}
+.add_comment form input{
+    border: 0px;
+    width: 80%;
+    height: 40px;
+    font-size: 14px;
+    color: var(--text-color);
+    outline: none;
+    background: var(--background-color);
+}
+.add_comment form button{
+    float: right;
+    border: none;
+    background: white;
+    color: rgb(0, 153, 255);
+    margin-top: 15px;
+}
+
+/* styles for aside content */
+aside{
+    margin-top: 55px;
+}
+
+/* styles for profile picture and username in the aside section of the page */
+aside #user_name_and_profile_picture div{
+    display: var(--display);
+    margin-right: var(--margin-right);
+}
+
+aside #user_name_and_profile_picture div img{
+    border-radius: var(--img-border-radius);
+    width: 60px;
+    height: 50px;
+    margin-top: 15px;
+    object-fit: var(--img-object-fit);
+}
+aside #user_name_and_profile_picture div p{
+    margin-top: -5px;
+    color: var(--text-color);
+}
+
+/* styles for "STORIES"  and "SUGGESTIONS" in the aside section of the page */
+aside #stories, aside #suggestions{
+    border: 1px solid rgb(201, 197, 197);
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px rgb(201, 197, 197); 
+    margin-bottom: 30px;
+}
+aside #stories p a, aside #suggestions p a{
+    text-decoration: none;
+    color:  black;
+}
+aside #stories p, aside #suggestions p{
+    width: 95%;
+    margin-right: var(--margin);
+    margin-left: var(--margin);
+}
+aside #stories p span:nth-of-type(1), aside #suggestions p span:nth-of-type(1){
+    color: var(--text-color);
+}
+aside #stories p span:nth-of-type(2), aside #suggestions p span:nth-of-type(2){
+    font-weight: bold;
+    float: right;
+}
+
+/* specific styles for the "stories section" of the aside content of the web page*/
+aside #stories #all_my_stories {
+    width: 95%;
+    margin-right: var(--margin);
+    margin-left: var(--margin);
+    height: 170px;
+    overflow-y: auto;
+}
+aside #stories img{
+    border: 2px solid red;
+    border-radius: var(--img-border-radius);
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    object-fit: var(--img-object-fit); 
+}
+aside #stories #all_my_stories .story div{
+    display: var(--display);
+    margin-right: var(--margin-right);
+}
+aside #stories #all_my_stories .story .story_name_and_time p{
+    color: var(--text-color);
+    font-size: 10px;
+}
+
+/* specific styles for the "suggestions section" of the aside content of the web page*/
+aside #suggestions img{
+    border-radius: var(--img-border-radius);
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    object-fit: var(--img-object-fit); 
+}
+aside #all_my_suggestions {
+    width: 95%;
+    margin-right: var(--margin);
+    margin-left: var(--margin);
+}
+aside #suggestions #all_my_suggestions .suggestion div{
+    display: var(--display);
+    margin-right: var(--margin-right);
+}
+aside #suggestions #all_my_suggestions .suggestion a{
+    float: right;
+    text-decoration: var(--text-decoration);
+    color: rgb(0, 153, 255);
+    margin-top: 35px;
+}
+aside #suggestions #all_my_suggestions .suggestion p{
+    color: var(--text-color);
+    font-size: 13px;
+    margin-top: -10px;
+}
+
+/* styles for the minor navigational links in the aside section of the web page */
+#minor_nav_links{
+    margin-left: -35px;
+}
+#minor_nav_links ul{
+list-style-type: var(--list-style);
+margin-top: -15px;
+}
+#minor_nav_links ul li{
+    display: inline-block;
+}
+#minor_nav_links ul li a{
+    text-decoration: var(--text-decoration);
+    color: var(--text-color);
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* styles for the copyright information */
+#copyright_info small{
+    font-size: 11px;
+    color: var(--text-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* media query for a minor breakpoint */
+@media screen and (min-width: 1040px) and (max-width: 1300px){
+    section#main_section{
+        width: 85%;
+    }
+}
+
+/* media queries for medium sized devices*/
+@media screen and (max-width: 1039px){
+    /* nav styles */
+    #nav_items_group{
+        width: var(--width);
+    }
+    ul.nav_links li:nth-of-type(2){
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    /*  styles for the main section of the web page*/
+    section#main_section{
+        display: block;
+        margin-left: var(--margin);
+        margin-right: var(--margin);
+    }
+    /*  styles for the aside section of the web page */
+    aside{
+        display: none;
+    }
+}
+
+
+
+
+/* media queries for mobile devices */
+@media screen and (max-width: 795px){
+    /* nav styles */
+    #nav_items_group{
+        width: 96%;
+    }
+    ul.nav_links li:nth-of-type(2){
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    form{
+        margin-left: 9%;
+    }
+    input[type="search"]{
+        width: 150px;
+    }
+    .fa.fa-search{
+        left: 30px;
+        top: 16px;
+    }
+
+    /* styles for main sectionof web page  */
+    section#main_section{
+        width: 80%;
+    }
+}
+
+/* media queries for extra small mobile devices */
+@media screen and (max-width: 524px){
+    /* nav styles */
+    #nav_items_group{
+        width: 95%;
+        font-size: 0.85em;
+    }
+    form{
+            display: none;
+        }
+    /* styles for main page section of web page */
+    section#main_section{
+        width: var(--full-width);
+    }
+    /* styles for the input area for adding comments for a post*/
+    .add_comment form{
+        display: block; /* This ensures that this particular form is visible on the web page */
+    }
+}
