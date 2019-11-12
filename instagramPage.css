@@ -1,17 +1,14 @@
 /* general styles*/
 body{
     --background-color: #fafafa; 
-    --width: 90%;
-    --margin: auto;
-    --full-width: 100%;
-    --list-style: none;
-    --text-decoration: none;
-    --float: left;
-    --text-color: rgb(139, 137, 137);
-    --display: inline-block;
-    --margin-right: 10px;
-    --img-border-radius: 50%;
-    --img-object-fit: cover;
+    --ninetyPercent: 90%;
+    --hundredPercent: 100%;
+    --left: left;
+    --grey: rgb(139, 137, 137);
+    --inlineBlock: inline-block;
+    --ten: 10px;
+    --fiftyPercent: 50%;
+    --cover: cover;
     background: var(--background-color);
 }
 
@@ -27,23 +24,23 @@ nav{
     justify-content: center;
     font-size: 1.7em;
     position: fixed; 
-    width: var(--full-width);
+    width: var(--hundredPercent);
     z-index: 1000;
 }
 
 #nav_items_group{
     width: 70%;
-    margin-left: var(--margin);
-    margin-right: var(--margin);
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
 }
 
 .nav_group{
-    float: var(--float);
+    float: var(--left);
 }
 form{
     margin-left: 20%;
-    margin-right: var(--margin);
+    margin-right: auto;
     position: relative;
     color: rgb(200, 200, 200);
 }
@@ -66,27 +63,27 @@ float: right;
 margin-top: 2px;
 }
 
-ul.nav_links li{
-    float: var(--float);
-    list-style-type: var(--list-style);
+.nav_links li{
+    float: var(--left);
+    list-style-type: none;
 }
 
-#brand_name_and_icon a, ul.nav_links li a{
-    text-decoration: var(--text-decoration);
+.icon{
+    text-decoration: none;
     color: black;
 }
 
-ul.nav_links li:nth-of-type(2){
+#centerIcon{
     margin-left: 50px;
     margin-right: 50px;
 }
 
 /* general styles for the main section of the web page */
-section#main_section{
+#main_section{
     padding-top: 100px;
     width: 70%;
-    margin-left: var(--margin);
-    margin-right: var(--margin);
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 70% 1fr;
     grid-gap: 25px;
@@ -96,7 +93,7 @@ section#main_section{
 
 /* general style for a full instagram post */
 .friend_post{
-    width: var(--full-width);
+    width: var(--hundredPercent);
     border: 1px solid rgb(201, 197, 197);
     border-radius: 6px;
     box-shadow: 2px 2px 3px rgb(201, 197, 197);
@@ -105,18 +102,18 @@ section#main_section{
 
 /* styles for friend details */
 .friend_details{
-    width: var(--width);
-    margin-left: var(--margin);
-    margin-right: var(--margin);
+    width: var(--ninetyPercent);
+    margin-left: auto;
+    margin-right: auto;
 }
 .friend_profile_picture img{
     width: 60px;
     height: 50px;
-    object-fit: var(--img-object-fit);
-    border-radius: var(--img-border-radius);
+    object-fit: var(--cover);
+    border-radius: var(--fiftyPercent);
 }
 .friend_details > div{
-display: var(--display);
+display: var(--inlineBlock);
 }
 .friend_details > div:nth-of-type(1){
     margin-right: 20px;
@@ -125,11 +122,11 @@ display: var(--display);
 .friend_details > div:nth-of-type(2){
     line-height: 30px;
 }
-.friend_details > div:nth-of-type(2) p:nth-of-type(2){
-margin-top: -15px;
-}
-.friend_details > div:nth-of-type(2) p:nth-of-type(1){
+.friend .firstP{
 font-weight: bold;
+}
+.friend .secondP{
+    margin-top: -15px;
 }
 .friend_details > div:nth-of-type(3){
 float: right;
@@ -140,56 +137,53 @@ float: right;
 
 /* styles for the friend's main image or video post */
 .friend_image_post img{
-    width: var(--full-width);
+    width: var(--hundredPercent);
 }
 
 
 /* Styles for likes and comments */
 .likes_and_comments{
-width: var(--full-width);
-margin-left: var(--margin);
-margin-right: var(--margin);
+width: var(--hundredPercent);
+margin-left: auto;
+margin-right: auto;
 }
 
 .likes_and_comments ul{
-    list-style-type: var(--list-style);
+    list-style-type: none;
     height: 20px;
     margin-top: 0px;
 }
-.likes_and_comments ul li a{
-    color: black;
-}
-.likes_and_comments ul li{
-    display: var(--display);
+.likes_and_comments li{
+    display: var(--inlineBlock);
     margin-right: 45px;
     font-size: 1.5em;
     margin-left: -30px;
     margin-top: 5px;
 }
-.likes_and_comments ul li:nth-of-type(4){
+.likes_and_comments li:nth-of-type(4){
     float: right;
-    margin-right: var(--margin-right);
+    margin-right: var(--ten);
 }
 .details_of_likes_and_comments{
     width: 97%;
-    margin-left: var(--margin);
-    margin-right: var(--margin);
+    margin-left: auto;
+    margin-right: auto;
 }
-.details_of_likes_and_comments span.commentator{
+.details_of_likes_and_comments .commentator{
     font-weight: bold;
 }
 .details_of_likes_and_comments a{
-    text-decoration: var(--text-decoration);
+    text-decoration: none;
 }
 .details_of_likes_and_comments i{
     float: right;
 }
 .details_of_likes_and_comments .time_of_post{
     font-size: 11px;
-    color: var(--text-color);
+    color: var(--grey);
 }
-.details_of_likes_and_comments .view_comments a{
-    color: var(--text-color);
+ .view_comments a{
+    color: var(--grey);
 }
 
 /* styles for the input area where comments can be added */
@@ -202,16 +196,16 @@ margin-left: 0px;
 margin-bottom: -5px;
 height: 50px;
 }
-.add_comment form input{
+.add_comment input{
     border: 0px;
     width: 80%;
     height: 40px;
     font-size: 14px;
-    color: var(--text-color);
+    color: var(--grey);
     outline: none;
     background: var(--background-color);
 }
-.add_comment form button{
+.add_comment button{
     float: right;
     border: none;
     background: white;
@@ -225,97 +219,95 @@ aside{
 }
 
 /* styles for profile picture and username in the aside section of the page */
-aside #user_name_and_profile_picture div{
-    display: var(--display);
-    margin-right: var(--margin-right);
+#user_name_and_profile_picture div{
+    display: var(--inlineBlock);
+    margin-right: var(--ten);
 }
-
-aside #user_name_and_profile_picture div img{
-    border-radius: var(--img-border-radius);
+ #user_name_and_profile_picture img{
+    border-radius: var(--fiftyPercent);
     width: 60px;
-    height: 50px;
+    height: 60px;
     margin-top: 15px;
-    object-fit: var(--img-object-fit);
+    object-fit: var(--cover);
 }
-aside #user_name_and_profile_picture div p{
+ #user_name_and_profile_picture p{
     margin-top: -5px;
-    color: var(--text-color);
+    color: var(--grey);
 }
 
 /* styles for "STORIES"  and "SUGGESTIONS" in the aside section of the page */
-aside #stories, aside #suggestions{
+.asideContent{
     border: 1px solid rgb(201, 197, 197);
     border-radius: 6px;
     box-shadow: 2px 2px 3px rgb(201, 197, 197); 
     margin-bottom: 30px;
 }
-aside #stories p a, aside #suggestions p a{
+.asideContent a{
     text-decoration: none;
     color:  black;
 }
-aside #stories p, aside #suggestions p{
+.asideContent p{
     width: 95%;
-    margin-right: var(--margin);
-    margin-left: var(--margin);
+    margin-right: auto;
+    margin-left: auto;
 }
-aside #stories p span:nth-of-type(1), aside #suggestions p span:nth-of-type(1){
-    color: var(--text-color);
+.asideContent span:nth-of-type(1){
+    color: var(--grey);
 }
-aside #stories p span:nth-of-type(2), aside #suggestions p span:nth-of-type(2){
+.asideContent span:nth-of-type(2){
     font-weight: bold;
     float: right;
 }
 
 /* specific styles for the "stories section" of the aside content of the web page*/
-aside #stories #all_my_stories {
+ #all_my_stories {
     width: 95%;
-    margin-right: var(--margin);
-    margin-left: var(--margin);
+    margin-right: auto;
+    margin-left: auto;
     height: 170px;
     overflow-y: auto;
 }
-aside #stories img{
+ #stories img{
     border: 2px solid red;
-    border-radius: var(--img-border-radius);
+    border-radius: var(--fiftyPercent);
     width: 50px;
-    height: 50px;
+    height: 55px;
     margin-top: 15px;
-    object-fit: var(--img-object-fit); 
+    object-fit: var(--cover); 
 }
-aside #stories #all_my_stories .story div{
-    display: var(--display);
-    margin-right: var(--margin-right);
+ .story div{
+    display: var(--inlineBlock);
+    margin-right: var(--ten);
 }
-aside #stories #all_my_stories .story .story_name_and_time p{
-    color: var(--text-color);
+ .story_name_and_time p{
+    color: var(--grey);
     font-size: 10px;
 }
 
 /* specific styles for the "suggestions section" of the aside content of the web page*/
-aside #suggestions img{
-    border-radius: var(--img-border-radius);
+#suggestions img{
+    border-radius: var(--fiftyPercent);
     width: 40px;
     height: 40px;
     margin-top: 15px;
-    object-fit: var(--img-object-fit); 
-}
-aside #all_my_suggestions {
+    object-fit: var(--cover); 
+} #all_my_suggestions {
     width: 95%;
-    margin-right: var(--margin);
-    margin-left: var(--margin);
+    margin-right: auto;
+    margin-left: auto;
 }
-aside #suggestions #all_my_suggestions .suggestion div{
-    display: var(--display);
-    margin-right: var(--margin-right);
+  .suggestion div{
+    display: var(--inlineBlock);
+    margin-right: var(--ten);
 }
-aside #suggestions #all_my_suggestions .suggestion a{
+  .suggestion a{
     float: right;
-    text-decoration: var(--text-decoration);
+    text-decoration: none;
     color: rgb(0, 153, 255);
     margin-top: 35px;
 }
-aside #suggestions #all_my_suggestions .suggestion p{
-    color: var(--text-color);
+  .suggestion p{
+    color: var(--grey);
     font-size: 13px;
     margin-top: -10px;
 }
@@ -325,15 +317,15 @@ aside #suggestions #all_my_suggestions .suggestion p{
     margin-left: -35px;
 }
 #minor_nav_links ul{
-list-style-type: var(--list-style);
+list-style-type: none;
 margin-top: -15px;
 }
-#minor_nav_links ul li{
+#minor_nav_links li{
     display: inline-block;
 }
-#minor_nav_links ul li a{
-    text-decoration: var(--text-decoration);
-    color: var(--text-color);
+#minor_nav_links  a{
+    text-decoration: none;
+    color: var(--grey);
     font-size: 11px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -341,13 +333,13 @@ margin-top: -15px;
 /* styles for the copyright information */
 #copyright_info small{
     font-size: 11px;
-    color: var(--text-color);
+    color: var(--grey);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* media query for a minor breakpoint */
 @media screen and (min-width: 1040px) and (max-width: 1300px){
-    section#main_section{
+    #main_section{
         width: 85%;
     }
 }
@@ -356,17 +348,17 @@ margin-top: -15px;
 @media screen and (max-width: 1039px){
     /* nav styles */
     #nav_items_group{
-        width: var(--width);
+        width: var(--ninetyPercent);
     }
-    ul.nav_links li:nth-of-type(2){
+    .nav_links li:nth-of-type(2){
         margin-left: 20px;
         margin-right: 20px;
     }
     /*  styles for the main section of the web page*/
-    section#main_section{
+    #main_section{
         display: block;
-        margin-left: var(--margin);
-        margin-right: var(--margin);
+        margin-left: auto;
+        margin-right: auto;
     }
     /*  styles for the aside section of the web page */
     aside{
@@ -383,7 +375,7 @@ margin-top: -15px;
     #nav_items_group{
         width: 96%;
     }
-    ul.nav_links li:nth-of-type(2){
+    #centerIcon{
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -399,7 +391,7 @@ margin-top: -15px;
     }
 
     /* styles for main sectionof web page  */
-    section#main_section{
+    #main_section{
         width: 80%;
     }
 }
@@ -415,8 +407,8 @@ margin-top: -15px;
             display: none;
         }
     /* styles for main page section of web page */
-    section#main_section{
-        width: var(--full-width);
+    #main_section{
+        width: var(--hundredPercent);
     }
     /* styles for the input area for adding comments for a post*/
     .add_comment form{
