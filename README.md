@@ -1,7 +1,7 @@
 # InstagramPage
 
 ## Overview
-This project is a clone of my Instagram Page. It was built from scratch using HTML and pure CSS. 
+This project is a striped down version of an Instagram Page. It was built from scratch using HTML and pure CSS. 
 
 ## Purpose
 The purpose of this project was simply to practise and demonstrate my skills in basic Web Development technologies, including HTML, CSS, Command Line Interface, Git and Github. 
